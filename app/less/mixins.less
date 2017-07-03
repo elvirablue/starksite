@@ -2,10 +2,10 @@
 @import "scaffolding.less";
 
 @import "blocks/btn.less";
-@import "blocks/input.less";
+/*@import "blocks/input.less";
 @import "blocks/breadcramps.less";
 
-/*
+
 @import "blocks/page-header-desktop.less";
 @import "blocks/page-header-mobil.less";
 @import "blocks/main-nav.less";
@@ -65,25 +65,27 @@
 
 }
 
-.agora(@size) {  
-  font-family: "Agora", serif;
-  font-size: @size;  
+
+
+.text-regular(@size) {  
+  font-family: 'pf_din_text_cond_proregular', sans-serif;
+  font-size: @size; 
+  font-weight: normal;
 }
 
-.linux(@size) {  
-  font-family: "Linux", serif;
+.text-bold(@size) {  
+  font-family: 'pf_din_text_cond_probold', sans-serif;
   font-size: @size; 
+  font-weight: normal;
 }
 
-.roboto(@size) { 
-  font-family: "Roboto", sans-serif;
+.text-thin(@size) {  
+ font-family: 'pf_din_text_cond_prothin', sans-serif;
   font-size: @size; 
+  font-weight: normal;
 }
 
-.open-sans(@size) {  
-  font-family: "OpenSans", sans-serif;
-  font-size: @size; 
-}
+
 
 .sepia() { 
     filter: sepia(100%);
