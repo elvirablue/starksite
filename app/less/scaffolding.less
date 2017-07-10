@@ -1,6 +1,7 @@
-* {
+* { 
 	box-sizing: border-box;
-	font-size: 1rem;
+	font-size: 16px;
+	color: @color-text-black;
 	line-height: 1.3;
 	margin: 0;
 	padding: 0;
@@ -19,7 +20,7 @@ html {
 }  
  
 body {	
-	.text-regular(1rem);
+	.text-regular(16px);
 	color: @color-black;
 	font-style: normal;
 	font-weight: normal;
@@ -27,7 +28,6 @@ body {
 }
 
 h1, h2, h3, h5 {	
-	color: @color-black;
 	font-style: normal;
 	font-weight: normal;
 	margin: 0;
@@ -36,20 +36,18 @@ h1, h2, h3, h5 {
 
 
 h1 { 
-	.text-bold(2.2rem);	
-	font-weight: bold;
+	.text-bold(58px);	
 	text-transform: uppercase;
+	text-align: left;
 	
 }
 
 h2 { 
-	.text-bold(2rem);	
-	color:  @color-black;
-	font-weight: bold;
-	text-transform: uppercase;
-	line-height: 1.3;
-	padding: 0;
-	margin: 0;	
+	.text-bold(58px);
+	padding-bottom: 60px;
+	padding-top: 80px;
+	text-transform: uppercase;	
+	line-height: 1.3;		
 	text-align: left;
 }
 
@@ -57,23 +55,44 @@ h2 {
 	text-transform: uppercase;
 }
 
-h3 { 
-	.text-bold(1.8rem);	
-	text-transform: uppercase;
-	font-weight: bold;
-	text-transform: uppercase;
+.white {
+	color: @color-white;
 }
 
-h4, h5 {
-	.text-bold(1.2rem);	
-	color:  @color-black;
-	font-weight: bold;
-	text-transform:none;
+.green {
+	color: @color-bg-green;
+}
+
+.black {
+	color: @color-text-black;
+}
+
+h3 { 
+	.text-bold(30px);	
+	text-transform: none;
+}
+
+h4 {
+	.text-bold(28px);	
+	color:  @color-black;	
+}
+
+h5 {
+	.text-bold(28px);
 }
 
 hr {
 	margin: 0;
 	margin-top: -2px;
+}
+
+hr.hr-title {
+	height: 1px;
+	width: 100px;
+	margin: 25px 0 30px;
+	background-color: @color-white;
+	color: @color-white;
+	box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.2);
 }
 
 img {
@@ -147,7 +166,7 @@ a {
 	.text-regular(1rem);
 	color:@color-link-green;
 	text-decoration: underline;
-	font-weight: bold;
+	
 }
 
 .link:hover,
@@ -192,7 +211,17 @@ a {
 
 
 @media @tablet-widths {
-		
+		h1 {
+			font-size: 40px;
+		}
+
+		h3 {
+			font-size: 30px;
+		}
+
+		h2 {
+			text-align: center;
+		}
 }
 
 @media @mobil-widths {
@@ -200,15 +229,20 @@ a {
 		height: 30px;
 	}
 
+	h1 {
+		font-size: 35px;
+	}
+
 	h2 {
-		font-size: 1.8rem;
+		.text-bold(35px);
+		padding-bottom: 30px;
+		padding-top: 40px;
 	}
 	h3 {
-		font-size: 1.4rem;
-		text-align: left;
+		
 	}
-	h4 {
-		font-size: 1.25rem;
+	h4,h5 {
+		font-size: 22px;
 	}
 
 	.main-head__title {

@@ -1,0 +1,144 @@
+.page-header-bg {
+		background-color: @color-bg-gray;
+}
+.page-header {
+	.container-fluid();
+	.clearfix();
+
+	&__left, &__center, &__right {
+		display: inline-block;
+		vertical-align: top;
+		
+		float: left;
+	}
+
+	&__left {
+		width: 25%;
+		padding: 28px 0;
+	}
+
+	&__center {
+		width: 45%;
+		padding: 34px 0 0 0;
+		text-align: center;
+	}
+
+	&__right {	
+		width: 30%;	
+		float: right;
+		padding-top: 40px;
+		text-align: right;
+
+		a.link {
+			display: block;
+			width: 100%;			
+			text-align: right;
+			font-size: 18px;
+			line-height: 24px;
+			margin: 0;
+			margin-bottom: 28px;
+			transition: color ease 0.3s,
+						font-size ease 0.5s,
+						text-decoration ease 0.1s;
+		}
+
+		a.link:hover, a.link:active {
+			font-size: 22px;
+			line-height: 24px;
+			color: @color-link-green-hover;
+			text-decoration: none;
+		}
+	}
+}
+
+
+@media @tablet-widths {
+	.page-header {
+		&__left {
+			display: none;
+		}
+
+		&__center {
+			width: 50%;
+			text-align: left;
+		}
+		&__right {
+			width: 50%;
+		}
+	}	
+}
+
+@media @mobil-widths {
+	.page-header {
+		&__center {
+			width: 100%;
+			text-align: center;
+		}
+		&__right {
+			width: 100%;
+			text-align: center;
+			a.link {
+				margin-right: 0;
+				margin-left: auto;
+			}
+		}
+	}
+}
+
+.logo {
+	display: block;
+	width: 192px;
+	height: 78px;
+	font-size: 0;
+	background: url("../img/logo.png") no-repeat center;
+	background-size: cover;
+}
+
+.address {
+	display: inline-block;
+	width: auto;
+	height: auto;	
+	padding-left: 50px;
+	text-align: left;
+	.text-bold(20px);
+	color: @color-white;
+	background: url("../img/ico-map.png") no-repeat left center;
+	background-size: auto;
+
+	span {
+		display: block;
+		.text-regular(16px);
+		color: @color-gray;
+	}
+
+	@media @mobil-widths {
+		width: 300px;
+		font-size: 17px;
+		span { font-size: 14px;}
+	}
+}
+
+.phone {
+	display: inline-block;
+	width: auto;
+	height: auto;
+	padding-left: 50px;
+	text-align: right;
+	.text-bold(36px);
+	color: @color-white;
+	background: url("../img/ico-phone.png") no-repeat left center;
+	background-size: auto;
+	white-space: nowrap;
+
+	span {		
+		.text-regular(36px);
+		color: @color-gray;
+	}
+
+	@media @mobil-widths {
+		width: 300px;
+		text-align: left;
+		font-size: 28px;
+		span { font-size: 28px;}
+	}
+}

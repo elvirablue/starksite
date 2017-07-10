@@ -1,0 +1,34 @@
+.page-footer-bg {
+	background-color: @color-bg-gray;
+	margin-top: -@height-footer;
+	height: @height-footer;
+	padding-top: 20px;
+}
+
+.page-footer {
+	.container-fluid();
+	.clearfix();
+
+	&__left {		
+		float: left;
+		width: 25%;
+		padding: 28px 0;
+	}
+
+	&__right {	
+		width: 30%;	
+		float: right;
+		padding-top: 40px;
+		text-align: right;
+	}
+}
+
+@media @tablet-widths {
+	.page-footer__right {	
+		width: 50%;	
+	}	
+}
+
+@media @mobil-widths {
+
+}

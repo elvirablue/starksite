@@ -1,0 +1,59 @@
+.block-social {
+	display: inline-block;
+}
+
+.social {
+	display: inline-block;
+	vertical-align: middle;
+	width: 46px;
+	height: 46px;
+	border-radius: 50%;
+	border: 2px solid @color-logo-green;
+	background-color: transparent;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: auto 20px;
+	font-size: 0;
+	margin: 5px;
+
+	&--vk {
+		background-image: url("../img/vk-logo.svg");
+		transition: background-image ease 0.3s;
+	}
+	&--vk:hover {
+		background-image: url("../img/vk-logo-hover.svg");		
+	}
+
+	&--facebook {
+		background-image: url("../img/f-logo.svg");
+		transition: background-image ease 0.3s;
+	}
+	&--facebook:hover {
+		background-image: url("../img/f-logo-hover.svg");		
+	}
+
+	&--instargam {
+		background-image: url("../img/inst-logo.svg");
+		transition: background-image ease 0.3s;
+	}
+	&--instargam:hover {
+		background-image: url("../img/inst-logo-hover.svg");		
+	}
+
+	&--telegram {
+		background-image: url("../img/tel-logo.svg");
+		transition: background-image ease 0.3s;
+	}
+	&--telegram:hover {
+		background-image: url("../img/tel-logo-hover.svg");		
+	}
+}
+
+@keyframes anim-rotate {
+  to {transform:rotate(360deg);}
+}
+
+.social:hover {
+	animation: anim-rotate 1s 1;
+	border-color: @color-logo-green-hover;
+}
