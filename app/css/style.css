@@ -1583,6 +1583,82 @@ a {
   background-position: center;
   background-repeat: no-repeat;
 }
+.main-logo {
+  width: 100%;
+  max-width: 1024px;
+  padding: 0 30px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+@media (max-width: 1024px) {
+  .main-logo {
+    width: 100%;
+  }
+}
+@media (max-width: 780px) {
+  .main-logo {
+    width: auto;
+    text-align: center;
+    min-width: 320px;
+    padding: 0 20px;
+  }
+}
+.main-logo__title {
+  display: block;
+  padding: 75px 0;
+  width: 100%;
+  background: url("../img/bg-logo-arrow.png") 170px center no-repeat;
+  background-size: contain;
+}
+.main-logo__title .left {
+  display: inline-block;
+  vertical-align: middle;
+  width: 400px;
+  font-family: 'pf_dintext_probold', sans-serif;
+  font-size: 35px;
+  text-transform: uppercase;
+}
+.main-logo__title .left span {
+  font-family: 'pf_dintext_probold', sans-serif;
+  font-size: 58px;
+}
+.main-logo__title .right {
+  display: inline-block;
+  vertical-align: middle;
+  width: -webkit-calc(100% - 410px);
+  width: calc(100% - 410px);
+  font-family: 'pf_dintext_proregular', sans-serif;
+  font-size: 30px;
+  padding-left: 50px;
+}
+@media (max-width: 1024px) {
+  .main-logo__title {
+    padding: 45px 0;
+    background-position: 100px center;
+  }
+  .main-logo__title .left {
+    width: 250px;
+    font-size: 28px;
+  }
+  .main-logo__title .left span {
+    font-size: 45px;
+  }
+  .main-logo__title .right {
+    font-size: 24px;
+    width: -webkit-calc(100% - 280px);
+    width: calc(100% - 280px);
+  }
+}
+@media (max-width: 780px) {
+  .main-logo__title {
+    background-image: none;
+  }
+  .main-logo__title .left,
+  .main-logo__title .right {
+    width: 100%;
+    padding: 0;
+  }
+}
 /*@import "blocks/breadcpamps.less";
 
 @import "blocks/main-slider.less";

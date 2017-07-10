@@ -1,0 +1,64 @@
+.main-logo {
+	.container-fluid();
+	padding-top: 50px;
+
+	&__title {
+		display: block;
+		padding: 75px 0;
+		width: 100%;
+		background: url("../img/bg-logo-arrow.png") 170px center no-repeat;
+		background-size: contain;
+
+		.left {
+			display: inline-block;
+			vertical-align: middle;
+			width: 400px;
+			.text-bold(35px);
+			text-transform: uppercase;
+			span {
+				.text-bold(58px);
+			}
+		}
+
+		.right {
+			display: inline-block;
+			vertical-align: middle;
+			width: ~'calc(100% - 410px)';
+			.text-regular(30px);
+			padding-left: 50px;
+		}
+	}
+}
+
+@media @tablet-widths {
+	.main-logo {
+		&__title {
+			padding: 45px 0;
+			background-position: 100px center;
+
+			.left {
+				width: 250px;
+				font-size: 28px;
+				span {font-size: 45px;}
+			}
+
+			.right {
+				font-size: 24px;
+				width: ~'calc(100% - 280px)';
+			}
+		}
+	}	
+}
+
+@media @mobil-widths {
+	.main-logo {
+
+		&__title {
+			background-image: none;
+			.left, .right {
+				width: 100%;
+				padding: 0;
+			}
+		}
+	}
+}
