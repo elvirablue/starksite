@@ -1,0 +1,114 @@
+.main-subs-bg {
+	background-color: #474747;
+	
+}
+
+.main-subs {
+	.container-fluid();
+	.clearfix();
+	min-height: 480px;
+
+	background: url("../img/mail.png") no-repeat 30px 230px;
+	background-size: auto;
+
+	h2 {
+		span {
+			font-family: inherit;
+			font-size: inherit;
+			color: #a5a5a5;
+		}
+
+		p {
+			.text-regular(25px);
+			color: inherit;
+		}
+	}
+
+	&__form {
+		display: block;
+		width: 640px;
+		float: right;
+		text-align: right;
+
+		p {
+			display: inline-block;
+			width: 290px;
+			.text-thin(13px);
+			text-align: center;
+			padding: 5px;
+		}
+	}
+
+	&__user-input {
+		width: 305px;		
+		margin-bottom: 40px;
+	}
+
+	&__user-input:first-child {
+		margin-right: 20px;
+	}
+
+	&__check {
+		width: 310px;		
+		text-align: left;
+		padding-top: 7px;
+		padding-left: 10px;
+	}
+
+	&__btn {
+		width: 305px;
+		display: inline-block;
+		vertical-align:top;
+	}
+}
+
+@media @tablet-widths {
+	.main-subs {
+		background-image: none;
+		&__form {
+			float: none;
+			margin: 0 auto 30px;
+		}
+	}	
+}
+
+@media @mobil-widths {
+	.main-subs {
+		h2 p {
+			font-size: 18px;
+			padding-top: 10px;
+		}
+		&__form {
+			width: 100%;
+			text-align: center;
+
+			p {
+				width: 100%;
+				font-size: 12px;
+			}
+		}
+
+		&__user-input {
+
+			width: 100%;
+			max-width: 305px;
+			margin: 0 auto 10px;
+		}
+
+		&__user-input:first-child {
+			margin-right: 0;
+		}
+
+		&__check {
+			max-width: 310px;
+			width: 100%;
+			text-align: center;
+			margin-bottom: 10px;
+		}
+
+		&__btn {
+			max-width: 310px;
+			width: 100%;
+		}
+	}
+}

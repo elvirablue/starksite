@@ -36,14 +36,14 @@ h1, h2, h3, h5 {
 
 
 h1 { 
-	.text-bold(58px);	
+	.text-bold(57px);	
 	text-transform: uppercase;
 	text-align: left;
 	
 }
 
 h2 { 
-	.text-bold(58px);
+	.text-bold(57px);
 	padding-bottom: 60px;
 	padding-top: 80px;
 	text-transform: uppercase;	
@@ -78,7 +78,8 @@ h4 {
 }
 
 h5 {
-	.text-bold(28px);
+	.text-bold(20px);
+	padding-top: 25px;
 }
 
 hr {
@@ -98,7 +99,7 @@ hr.hr-title {
 img {
 	max-width: 100%;
 	width: auto;
-	height: auto;
+	
 	vertical-align: bottom;
 }
 
@@ -163,16 +164,22 @@ a {
 .link {
 	display: inline-block;
 	margin: 0.8rem;
-	.text-regular(1rem);
+	.text-regular(16px);
 	color:@color-link-green;
 	text-decoration: underline;
+
+	transition: color ease 0.3s,
+				font-size ease 0.5s,
+				text-decoration ease 0.1s;
 	
 }
 
 .link:hover,
 .link:active,
 .link.active {
-	color: @color-gray;
+	font-size: 20px;	
+	color: @color-link-green-hover;
+	text-decoration: none;
 }
 
 

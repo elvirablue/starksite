@@ -7,6 +7,15 @@
 	position: relative;
 	z-index: 100;
 	
+	.block-logo-scroll {
+		display: inline-block;
+		float: left;
+		background: url("../img/logo.png") no-repeat center left;
+		background-size: contain;
+		width: 100px;
+		margin-right: 50px;
+		height: @nav-min-height;
+	}
 
 	&__wrapper {
 		.container-fluid();	
@@ -118,6 +127,11 @@
   display: none;
   background-color: #ffffff;
   box-shadow: 1px 0 20px 2px rgba(161, 147, 118, 0.4);   
+
+  .main-nav .main-nav__wrapper ul {
+  		width: ~'calc(100% - 160px)';
+		float: right;
+  }
 }
 
 .main-nav__logo-mobile {
@@ -138,6 +152,10 @@
 	.main-nav-scroll {
   		background-color: transparent;
   		box-shadow: none;  		
+  	}
+
+  	.main-nav .block-logo-scroll {
+  		display: none;
   	}
 
   	.main-nav__logo-mobile {
@@ -289,6 +307,12 @@
 
 
 @media @mobil-widths {
+	.main-nav-scroll .main-nav .main-nav__wrapper ul {
+		width: 100%;
+		li {
+			text-align: center;
+		}
+	}
 	.main-nav-block {
 		height: @nav-min-height-mobil;
 		padding-top:  @nav-min-height-mobil;

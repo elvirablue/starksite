@@ -3,8 +3,8 @@
  
 @import "blocks/btn.less";
 @import "blocks/slider.less";
-/*@import "blocks/input.less";
-@import "blocks/breadcramps.less";
+@import "blocks/input.less";
+/*@import "blocks/breadcramps.less";
 
 */
 @import "blocks/page-header.less";
@@ -19,6 +19,12 @@
 @import "blocks/block-review.less";
 @import "blocks/letters.less";
 @import "blocks/main-logo.less";
+@import "blocks/main-blog.less";
+@import "blocks/block-article.less";
+@import "blocks/main-form-kp.less";
+@import "blocks/main-subs.less";
+@import "blocks/main-steps.less";
+
 
 /*@import "blocks/breadcpamps.less";
 
@@ -71,7 +77,7 @@
 		width: auto;
 		text-align: center;
 		min-width: 320px;
-		padding: 0 20px;
+		padding: 0 20px 30px;
 	}
 
 }
@@ -84,7 +90,7 @@
 
 }
 
-.points() {
+.points(@height) {
 	position: relative;
 	z-index: 100;
 	&:before {
@@ -95,14 +101,14 @@
 			z-index: 101;
 			bottom: -1px;
 			right: 0;
-			content: " . . .";
+			content: "\00A0";
 			font-size: inherit;
-			line-height: 1.8;
+			line-height: @height;
 			color: inherit;
 			width: 100%;
 
 			@media @mobil-widths {
-				line-height: 1.5;
+				line-height: ~'calc(@height / 1.2)';
 			}
 		}
 }

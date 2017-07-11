@@ -1,0 +1,30 @@
+.main-blog-bg {
+	background-color: @color-bgblock-gray;
+}
+
+.main-blog {
+	.container-fluid();
+	padding-bottom: 50px;
+	text-align: center;
+
+	&__block-article {
+		margin: 0 0 50px 20px;
+	}
+
+	&__block-article:nth-child(2) {
+		margin-left: 0;
+	}	
+	
+}
+
+@media @tablet-widths {
+	.main-blog__block-article:nth-child(4) {
+		display: none;
+	}	
+}
+
+@media @mobil-widths {
+	.main-blog__block-article {
+		margin-left: 0;
+	}
+}

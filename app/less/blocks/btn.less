@@ -18,10 +18,24 @@
 .block-btn {
 	display: block;
 	width: 100%;
-	text-align: center;
+	text-align: center;	
+
+	.btn {
+		width: 300px;
+	}
 }
 
 .btn:hover, .btn:active, .btn.active {
 	background-image: linear-gradient(to top, rgb(255,203,0) 0%, rgb(255,165,0) 100%);
+}
+
+@media @tablet-widths {
+		
+}
+
+@media @mobil-widths {
+	.block-btn .btn {
+		width: 280px;
+	}
 }
 

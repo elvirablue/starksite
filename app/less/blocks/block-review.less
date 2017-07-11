@@ -36,19 +36,41 @@
 	&__text {
 		text-align: justify;
 		margin-bottom: 30px;
+		max-height: 240px;
+		overflow: hidden;
 	}
 
 	&__author {
 		text-align: right;
+		position: absolute;
+		bottom: 30px;
+		right: 40px;
 	}
+}
 
+@media @tablet-widths {
+	.block-review {
+		&__img-wr {
+			width: 60%;
+		}
+
+		&__description {
+			width: 37%;
+		}
+	}	
 }
 
 @media @mobil-widths {
 	.block-review  {		
 		padding: 0;
+		height: auto;
+		padding-bottom: 60px;
 
 		&__img-wr {
+			width: 80%;
+			padding-top: 20px;
+			height: auto;
+			min-height: 220px;
 			display: block;
 			margin: 0 auto 30px;
 		}
@@ -56,9 +78,9 @@
 		&__description {
 			display: block;	
 			margin: 0 auto;	
-			width: 100%;
-			max-width: 350px;	
-			padding-left: 0;
+			width: 80%;
+			padding: 0;
+			
 			text-align: center;
 			
 		}

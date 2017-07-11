@@ -1,0 +1,105 @@
+.main-form-kp-bg {
+	background: url("../img/bg-kp.png") no-repeat top center @color-bg-green; 
+	background-size: cover;
+	padding-bottom: 50px;
+	box-shadow: inset 0 10px 20px 3px rgba(0, 0, 0, 0.2);
+}
+
+.main-form-kp {
+	.container-fluid();
+	position: relative;
+
+	h2 {
+		span {
+			display: block;
+			color: inherit;
+			font-family: inherit;
+			font-size: 40px;
+		}
+	}
+
+	&__img-mac {
+		position: absolute;
+		z-index: 100;
+		top: 290px;
+		right: -100px;
+		width: 504px;
+		height: 267px;
+		padding: 22px 90px 43px;
+		background-image: url("../img/mac.png");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: auto;
+	}
+
+	&__img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	&__form {
+		display: block;
+		width: 600px;
+
+		p {
+			
+			.text-thin(16px);
+			text-align: center;
+		}
+	}
+
+	&__btn {
+		display: block;
+		margin: 5px auto;
+		width: 80%;
+	}
+}
+
+
+@media @tablet-widths {
+	.main-form-kp {
+		&__img-mac {
+			display: none;
+		}
+
+		&__form {
+			margin: 0 auto;
+		}
+	}	
+}
+
+@media @mobil-widths {
+	
+	.main-form-kp {
+		&__btn {
+			height: auto;
+			margin-top: 10px;
+			max-width: 305px;
+			line-height: 1.2;
+			padding: 10px;
+		}
+
+		&__form  {
+			width: 100%;
+
+			.user-input--main-form-kp {
+				display: block;
+				width: 100%;
+				max-width: 305px;
+				margin: 0 auto;
+				margin-bottom: 10px;
+			}
+
+			.user-input--block-area {
+				width: 100%;
+				max-width: 305px;
+				margin: 0 auto;
+
+			}
+		}
+	}
+}
