@@ -28,6 +28,30 @@
 			padding-left: 50px;
 		}
 	}
+
+	&__table {
+		display: block;
+		width: 100%;
+		padding: 50px 0 80px;
+
+		table {
+			width: 100%;
+
+			tr {
+				td {
+					width: 33%;
+					vertical-align: middle;
+					text-align: center;
+					padding: 20px 10px;
+
+					img {
+						max-width: 100%;
+						max-height: 100%;
+					}
+				}
+			}
+		}
+	}
 }
 
 @media @tablet-widths {
@@ -46,6 +70,11 @@
 				font-size: 24px;
 				width: ~'calc(100% - 280px)';
 			}
+		}
+
+		&__table {
+			
+			padding: 0 0 30px;
 		}
 	}	
 }
