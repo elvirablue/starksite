@@ -1,0 +1,42 @@
+.page-block {
+	.container-fluid();
+	.clearfix();
+	padding-top: 50px;
+
+	h2 {
+		.text-bold(50px);
+	}
+
+	&__article {
+		padding-top: 30px;
+		margin-left: -20px;
+		float: left;
+	}
+
+	&__block-article {
+		margin: 0 0 50px 24px;
+	}		
+}
+
+
+.page-block__article.big {
+	margin-left: 0;
+	width: 100%;
+}
+
+
+@media @tablet-widths {
+	.page-block {
+		h2 {font-size: 45px;}
+	}
+		
+}
+
+@media @mobil-widths {
+	.page-block {
+		padding-top: 30px;
+
+		h2 {font-size: 32px;}
+	}
+	
+}

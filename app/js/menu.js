@@ -6,25 +6,7 @@ $(document).on('ready', function(){
   var FLAG_visible_scroll_menu = false;   
   //var filter = document.querySelector('#js-filter');
 	
-
-
-  $('#js-filter').click(function(event){
-      event.preventDefault();
-      $('.catalog__filters').css('display','block');          
-      $('.catalog__bg-wrapper').css('display','block');
-  });
-
-   window.addEventListener('keydown', function(event) {
-          if (event.keyCode === 27 && $('.catalog__filters').css('display') === 'block') {
-            $('.catalog__filters').css('display','none');          
-            $('.catalog__bg-wrapper').css('display','none');
-          };
-    });
-
-   $('.catalog__bg-wrapper').click(function(event){
-      $('.catalog__filters').css('display','none');          
-      $('.catalog__bg-wrapper').css('display','none');
-   });
+   
 
 	navToggle[0].addEventListener('click', function() {
 		if (navMain[0].classList.contains('main-nav--closed')) {

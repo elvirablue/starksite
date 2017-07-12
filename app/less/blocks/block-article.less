@@ -3,14 +3,32 @@
 	display: inline-block;
 	vertical-align: top;
 	width: 300px;
-	min-height: 590px;
+	height: auto;
+	min-height: 300px;
 	padding: 20px;
+	padding-bottom: 50px;
 	border: 1px solid rgb(221, 221, 221);
 	border-radius: 4px;
 	background-color: #ffffff;
 
-	h5 {
+	h5, h5.mobil {
 		text-align: left;
+	}
+
+	&__date, &__time {		
+		padding-top: 20px;
+		padding-right: 50px;
+		.text-thin(20px);
+		text-transform: uppercase;
+	}
+
+	&__time {
+		.text-regular(20px);
+		font-weight: bold;
+	}
+
+	&__subtitle, h5.mobil, &__date, &__time {
+		display: none;
 	}
 
 	&__img {
@@ -79,13 +97,88 @@
 	}
 }
 
+.big {
+	.block-article {
+		display: block;
+		width: 100%;
+		margin: 0 auto 30px;
+		height: auto;
+		padding-bottom: 20px;
+		
+
+		&__link {
+			position: static;
+			width: 100%;
+			text-align: right;
+			padding-top: 30px;
+		}
+
+		&__text {
+			height: auto;
+			max-height: 190px;
+		}
+
+		h5 {
+			font-size: 25px;
+		}
+
+
+		&__img {
+			height: 400px;	/*'calc(100% / 2.35)';*/
+		}
+
+
+		&__date, &__time {
+			display: inline-block;			
+		}
+
+		
+	}
+}
+
 @media @tablet-widths {
 		
 }
 
 @media @mobil-widths {
+	.big .block-article,
 	.block-article {
-		width: 280px;
+		width: 100%;
+		display: block;
+		margin: 0 auto 30px;
+		max-width: 500px;	
+		padding-bottom: 20px;	
+
+		h5 { 
+			display: none;			
+		}
+
+		&__subtitle, h5.mobil {
+			display: block;
+			font-size: 18px;
+			padding-top: 0;
+			padding-bottom: 20px;
+			text-align: left;
+		}
+
+		&__subtitle {
+			font-size: 16px;
+			padding-top: 20px;
+		}
+
+		&__text, &__rubric, &__date, &__time {
+			display: none;
+		}
+
+		&__link {
+			position: static;
+			width: 100%;
+			text-align: right;
+		}
+
+		&__img {
+			height: 170px;
+		}
 	}
 }
 

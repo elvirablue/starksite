@@ -1,0 +1,40 @@
+.toggle-view {
+	display: block;
+	float: right;
+	margin-right: 5px;
+	width: 90px;
+	height: 30px;	
+	cursor: pointer;
+
+	.small, .big {
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		margin-right: 10px;
+		
+		opacity: 0.2;
+		transition: opacity ease 0.3s;
+	}
+
+	.small {
+		background: url("../img/menu.svg") no-repeat center;
+		background-size: 100%;}
+
+	.big {
+		background: url("../img/big-menu.svg") no-repeat center;
+		background-size: 100%;}
+
+	.small:hover, .small.active, .small:active,
+	.big:hover, .big.active, .big:active {
+		opacity: 1;
+	}
+
+	.small.active, .big.active {
+		cursor: default;
+	}
+
+	@media @mobil-widths {
+		display: none;
+	}
+
+}
