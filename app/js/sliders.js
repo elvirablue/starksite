@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     Array.prototype.slice.call(document.querySelectorAll('.js_ease')).forEach(function (element, index) {
 
-        if (element.classList.contains('main-tovar-hit')||element.classList.contains('main-tovar-new')) {
+        if (element.classList.contains('slider_letters')) {
             lory(element, {
                 infinite: 4,
                 slidesToScroll: 1,

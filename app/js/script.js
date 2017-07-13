@@ -13,10 +13,16 @@ $(document).on('ready', function(){
 
         $('#js-toggleview i').removeClass('active');
         $(this).addClass('active');
+
+        if ($('#js-toggleview i.big').hasClass('active')) {
+          $('#js-block-resize').addClass('big');
+        } else {
+          $('#js-block-resize').removeClass('big');
+        }
         
 
   });
 
 
-  	
+  	 
 });
