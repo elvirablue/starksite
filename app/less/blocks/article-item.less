@@ -1,0 +1,83 @@
+.article-item {
+	
+	h5, h5.mobil {
+		text-align: left;
+	}
+
+	&__date, &__time {
+		display: inline-block;		
+		padding-top: 20px;
+		padding-right: 50px;
+		.text-thin(20px);
+		text-transform: uppercase;
+	}
+
+	&__time {
+		.text-regular(20px);
+		font-weight: bold;
+	}
+
+	h5.mobil {
+		display: none;
+	}
+
+	&__img-wr {
+		display: block;
+		width: 100%;
+		height: auto;
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+		
+	}
+
+	&__rubric {
+		display: block;
+		position: relative;
+		width: 100%;
+		padding-left: 45px;
+		margin: 20px 0;
+		color: @color-gray;
+		.text-thin(16px);
+		text-align: left;
+
+		span {
+			color: @color-bg-green;
+			.text-regular(16px);
+			text-decoration: underline;
+		}
+
+	}
+
+	&__rubric:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		margin-top: -2px;
+		width: 25px;
+		height: 4px;
+		background-color: @color-bg-green;
+	}
+
+	&__text {
+		display: block;
+		width: 100%;
+		height: 190px;
+		overflow: hidden;
+		.points(1.2);
+		text-align: left;
+
+		* {
+			.text-regular(16px);
+			line-height: 1.2;
+			padding: 0;
+			padding-bottom: 10px;
+			margin: 0;
+			text-indent: 15px;
+		}
+	}
+}

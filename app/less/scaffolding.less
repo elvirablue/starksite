@@ -67,6 +67,17 @@ h2 {
 	color: @color-text-black;
 }
 
+.bg-block-gray {
+	.block-article {
+		background-color: #f2f2f2;
+	}
+
+	.block-article__text:before {
+		background-image: linear-gradient(to right, rgba(242, 242, 242, 0) 0%, #f2f2f2 80%);
+	}
+
+}
+
 h3 { 
 	.text-bold(30px);	
 	text-transform: none;
@@ -98,8 +109,7 @@ hr.hr-title {
 
 img {
 	max-width: 100%;
-	width: auto;
-	
+	width: auto;	
 	vertical-align: bottom;
 }
 
@@ -168,16 +178,14 @@ a {
 	color:@color-link-green;
 	text-decoration: underline;
 
-	transition: color ease 0.3s,
-				font-size ease 0.5s,
-				text-decoration ease 0.1s;
+	transition: color ease 0.3s;
 	
 }
 
 .link:hover,
 .link:active,
 .link.active {
-	font-size: 20px;	
+		
 	color: @color-link-green-hover;
 	text-decoration: none;
 }
