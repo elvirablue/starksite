@@ -1,4 +1,6 @@
 $(document).on('ready', function(){ 
+  
+
 	function trimAll(s) {
 	// убирает все пробелы в строке s	
  		var r=/\s+/g;

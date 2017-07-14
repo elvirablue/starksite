@@ -16,9 +16,12 @@
 	font-size: 0;
 	margin: 5px;
 
+	transition: color ease 0.5s,
+				border-width ease 0.5s;
+
 	&--vk {
 		background-image: url("../img/vk-logo.svg");
-		transition: background-image ease 0.3s;
+		transition: background-image ease 0.5s;
 	}
 	&--vk:hover {
 		background-image: url("../img/vk-logo-hover.svg");		
@@ -26,7 +29,7 @@
 
 	&--facebook {
 		background-image: url("../img/f-logo.svg");
-		transition: background-image ease 0.3s;
+		transition: background-image ease 0.5s;
 	}
 	&--facebook:hover {
 		background-image: url("../img/f-logo-hover.svg");		
@@ -34,7 +37,7 @@
 
 	&--instargam {
 		background-image: url("../img/inst-logo.svg");
-		transition: background-image ease 0.3s;
+		transition: background-image ease 0.5s;
 	}
 	&--instargam:hover {
 		background-image: url("../img/inst-logo-hover.svg");		
@@ -42,7 +45,7 @@
 
 	&--telegram {
 		background-image: url("../img/tel-logo.svg");
-		transition: background-image ease 0.3s;
+		transition: background-image ease 0.5s;
 	}
 	&--telegram:hover {
 		background-image: url("../img/tel-logo-hover.svg");		
@@ -54,6 +57,7 @@
 }
 
 .social:hover {
-	animation: anim-rotate 1s 1;
+	/*animation: anim-rotate 1s 1;*/
 	border-color: @color-logo-green-hover;
+	border-width: 3px;
 }

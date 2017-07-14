@@ -14,7 +14,7 @@
 		background-size: contain;
 		width: 100px;
 		margin-right: 50px;
-		height: @nav-min-height;
+		height: @nav-min-height-scroll;
 	}
 
 	&__wrapper {
@@ -124,17 +124,32 @@
 
 
 .main-nav-scroll {
-  display: none;
-  background-color: #ffffff;
-  box-shadow: 1px 0 20px 2px rgba(161, 147, 118, 0.4);   
+	height: @nav-min-height-scroll;
+  	display: none;
+  	background-color: transparent;
+  	/*box-shadow: 1px 0 20px 2px rgba(0, 0, 0, 0.2);   */
+	.main-nav,	
+  	.main-nav__wrapper,
+   	.main-nav__wrapper ul,
+  	.main-nav__wrapper ul li {
+  		min-height: @nav-min-height-scroll;
+  	}
+
+  	.main-nav .main-nav__wrapper ul li a {
+  		height: @nav-min-height-scroll;
+  		line-height: @nav-min-height-scroll;
+  	}
 
   .main-nav .main-nav__wrapper ul {
   		width: ~'calc(100% - 160px)';
 		float: right;
   }
+
+
 }
 
 .main-nav__logo-mobile {
+	display: block;
 	display: none;
 	position: absolute;
 	z-index: 5002;

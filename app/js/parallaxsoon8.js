@@ -48,8 +48,8 @@ function draw() {
 			rt: pulsion, 
 			xdef: 1260, 
 			ydef: 740, 
-			xdrift: 4, 
-			ydrift: 4, 
+			xdrift: 10, 
+			ydrift: 10, 
 			random: true, 
 			blink: true 
 		}; 
@@ -72,17 +72,27 @@ function draw() {
 			var e = 1 - this.rt / this.hl; 
 			var t = document.getElementById("container"); 
 			con.beginPath(); 
-			con.font = "normal 800 20px Dosis"; 
+			con.font = "normal 600 16px pf_dintext_prothin"; 
 			var n = this.r * e; 
 			g = con.createRadialGradient(this.x, this.y, 0, this.x, this.y, n <= 0 ? 1 : n); 
 			g.addColorStop(this.stop, colorRect + e * opacityRect + ")"); 
 			con.fillStyle = g; 
-			con.fillText("Stark", this.x, this.y); 
-			con.fillText("target", this.x + 80, this.y + 250); 
-			con.fillText("marketing", this.x + 300, this.y + 50); 
-			con.fillText("mmmmmmmmmm", this.x + 200, this.y + 50); 
-			con.fillText("blog", this.x + 20, this.y + 150); 
-			con.closePath(); con.fill() 
+			con.fillText("Разработка сайтов", this.x, this.y); 
+			con.fillText("Яндекс Директ", this.x + -20, this.y + 50); 
+			con.fillText("Google Adwords", this.x + 300, this.y + 80); 
+			con.fillText("SMM", this.x + 15, this.y + -60); 
+			con.fillText("Маркетинговая стратегия", this.x + 10, this.y + 350); 
+			con.fillText("Email-маркетинг", this.x + -15, this.y + 390);
+			con.fillText("Маркетинг-киты", this.x + -350, this.y + 10);
+			con.fillText("Landing page", this.x + 200, this.y + 0);
+			con.fillText("CRM-системы", this.x + 100, this.y + 200);
+			con.fillText("Сквозная аналитика", this.x + -120, this.y + 190);
+			con.fillText("Анализ конкурентов", this.x + 2, this.y + 250);
+			con.fillText("Контекстная реклама", this.x + -250, this.y + 70);
+			con.fillText("Медийная реклама", this.x + 80, this.y + -50);
+
+			con.closePath(); 
+			con.fill() 
 		}; 
 		this.move = function () { 
 			WIDTH = window.innerWidth; 
@@ -103,19 +113,19 @@ function draw() {
 	var g; 
 	var pxs = new Array; 
 	var rint = 3; 
-	var numberObject = 3e3; 
+	var numberObject = 3e9; 
 	var pulsion = 500; 
-	var radius = 1; 
+	var radius = 3; 
 	var speedX = 5; 
-	var speedY = 2; 
-	var widthRect = 100; 
-	var heightRect = 100; 
+	var speedY = 3; 
+	var widthRect = 150; 
+	var heightRect = 200; 
 	var colorRect = "rgba(255,255,255,"; 
-	var opacityRect = .2; 
-	var numberBall = 50; /* количество слов*/
+	var opacityRect = .3; 
+	var numberBall = 10; /* количество слов*/
 	var width = 125; 
-	var height = 105; 
-	var padding = 20; 
+	var height = 50; 
+	var padding = 10; 
 
 	$(document).ready(function () { 
 		BrowserDetection(); 

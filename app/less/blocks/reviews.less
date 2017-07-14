@@ -1,15 +1,21 @@
 .reviews-bg {
-	background: url("../img/bg-shadow.png") center 780px no-repeat,
-				url("../img/bg-light.png") top center no-repeat @color-bg-green;
-	padding-top: 100px;
-	margin-top: -100px;
-	box-shadow: inset 0 -10px 20px 3px rgba(0, 0, 0, 0.2);
+	background: url("../img/bg-light.png") top center no-repeat @color-bg-green;
+	background-size: contain;
+	
+	box-shadow: inset 0 -10px 20px 3px rgba(0, 0, 0, 0.1);
+
+	&--reviews {
+		margin-top: -100px;
+		padding-top: 100px;
+		
+	}
 
 }
 
 .reviews {
 	.container-fluid();
 	padding: 0;
+	padding-bottom: 70px;
 	background: url("../img/bg-big-arrow-down.png") top center no-repeat;
 
 	h2 {

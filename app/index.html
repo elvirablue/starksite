@@ -10,12 +10,14 @@
 	<link rel="stylesheet" href="css/stylename.css">
 	
 	<link rel="stylesheet" href="css/style.css">
+	<link href="css/brand.css" rel="stylesheet"/>
 	
 	<link rel="stylesheet" href="css/venders/animate.css">
+
 	<link rel="stylesheet" href="css/simple.css">
 
 	<script src="js/venders/lory.min.js"></script>
-	
+	<script src="js/venders/wow.min.js"></script>
 
 	<!-- jQuery -->
 	<script src="js/venders/jquery-1.12.4.js"></script>
@@ -34,6 +36,9 @@
 </head> 
 <body>
 
+<!-- *********************** КНОПКА НАВЕРХ ********************************- -->
+<div class="goup"><i></i></div>
+<!-- **********************************************************************- -->
 
 <div class="wrapper-x">
 	<div class="wrapper-y">
@@ -61,7 +66,7 @@
 	<!-- *************************** БЛОК МЕНЮ ***************************************- -->
 		<div class="main-nav-block main-nav--closed">
 			<button class="main-nav__toggle" type="button">Открыть меню</button>
-			<div class="main-nav__logo-mobile"></div>	
+			<a href="index.html" class="main-nav__logo-mobile"></a>	
 			<nav class="main-nav">			
 				<div class="main-nav__wrapper">
 					<ul>
@@ -85,7 +90,10 @@
 
 	<!-- *************************** ПЕРВЫЙ ЭКРАН ***************************************- -->
 		<div class="first-screen-bg">
-			<div class="bg-animation"></div>	
+			<div class="bg-animation">
+				<canvas id="pixie" style="font-family: 'pf_dintext_proregular', sans-serif;"></canvas>
+				<script src="js/parallaxsoon8.js" type="text/javascript"></script>
+			</div>	
 			<div class="first-screen">
 				<div class="first-screen__title-bg">
 					<div class="first-screen__title">
@@ -124,7 +132,7 @@
 			<div class="services">
 				<h2 class="white">Услуги</h2>
 				<div class="services__list">
-					<div class="block-service">
+					<div class="block-service wow fadeInUp" data-wow-delay="0.8s">
 						<div class="block-service__img" style="background-image: url(img/ico-serv1.png);"></div>
 						<h4 class="black">Разрабатываем сайты руками маркетологов</h4>
 						<hr class="block-service__hr">
@@ -191,12 +199,12 @@
 		<script src="js/sliders.js"></script>
 
 
-		<div class="reviews-bg">
+		<div class="reviews-bg reviews-bg--reviews">
 			<div class="reviews">
 				<h2 class="white">Отзывы</h2>
 
 				<div class="slider slider_reviews js_slider js_simple_dots simple ">
-                	<div class="frame js_frame">
+                	<div class="frame frame--reviews js_frame">
                 	    <ul class="slides js_slides">
                 	        <li class="js_slide">
                 	        	<div class="block-review">
@@ -270,7 +278,8 @@
 
 				
 			</div>
-
+		</div>
+		<div class="reviews-bg">
 			<div class="letters">
 				<h3 class="white caps">Благодарственные письма</h3>
 
@@ -466,11 +475,7 @@
 					<div class="step">
 						<i class="step__img" style="background-image: url(img/step1.png);"></i>
 						<i class="step__text">Позвоним</i>
-					</div>
-					<div class="step">
-						<i class="step__img" style="background-image: url(img/step2.png);"></i>
-						<i class="step__text">Отправим на электронную почту</i>
-					</div>
+					</div>					
 					<div class="step">
 						<i class="step__img" style="background-image: url(img/step3.png);"></i>
 						<i class="step__text">Уточним задачу и цели</i>
@@ -478,6 +483,10 @@
 					<div class="step">
 						<i class="step__img" style="background-image: url(img/step4.png);"></i>
 						<i class="step__text">Подготовим подробное коммерческое предложение</i>
+					</div>
+					<div class="step">
+						<i class="step__img" style="background-image: url(img/step2.png);"></i>
+						<i class="step__text">Отправим на электронную почту</i>
 					</div>
 					<div class="step">
 						<i class="step__img" style="background-image: url(img/step1.png);"></i>
@@ -491,8 +500,8 @@
 		</div>
 
 	<!-- *************************** БЛОК ММА *********************************- -->
-		<div class="separator"></div>
-		<div class="separator"></div>
+		<!--<div class="separator"></div>
+		<div class="separator"></div>-->
 	<!-- *************************** БЛОК ПОДПИСКА *********************************- -->
 		<div class="main-subs-bg">
 			<div class="main-subs">
@@ -502,7 +511,7 @@
 				  	<input type="text" class="user-input main-subs__user-input required" id="user_name_main_subs" name="user-name" placeholder="Имя" >				   	
 				    <input type="email" class="user-input main-subs__user-input required" id="user_mail_main_subs" name="user-mail" placeholder="E-mail">
 				    <div class="ch_wrapper main-subs__check">
-				    	<input id="check" type="checkbox" name="check[]" value="2">
+				    	<input id="check" type="checkbox" name="check[]" checked>
 				    	<label for="check">Без спама и только по делу</label>
 				    </div> 				    
 					<button class="btn main-subs__btn" type="submit" id="btn_main-subs">Подписаться</button> 
@@ -542,10 +551,10 @@
 	<div class="main-nav-scroll">
 		<div class="main-nav-block main-nav--closed">
 			<button class="main-nav__toggle" type="button">Открыть меню</button>
-			<div class="main-nav__logo-mobile"></div>
+			<a href="index.html" class="main-nav__logo-mobile"></a>
 			<nav class="main-nav">			
 				<div class="main-nav__wrapper">
-					<div class="block-logo-scroll"></div>
+					<a href="index.html" class="block-logo-scroll"></a>
 					<ul>
 						<li class="active"><a href="">Главная</a></li>
 						<li><a href="about.html">Услуги</a></li>
@@ -567,6 +576,8 @@
 </div> <!-- end wrapper-x -->
 
 <script src="js/menu.js"> </script>
+<script src="js/venders/wow.min.js"></script>
+<script src="js/wow.js"></script>
 <!--<script src="js/prev-video.js"> </script>		
 	
 <script src="js/modal.js"> </script>

@@ -1,14 +1,9 @@
  /********* Canvas*************/
- body
- {
-    background:url(../img/bg1.jpg) no-repeat center center fixed;
-    -webkit-background-size: 100%; 
-    -moz-background-size: 100%; 
-    -o-background-size: 100%; 
-    background-size: 100%; 
-	-webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-}
- #pixie{position:fixed;}
+ 
+ #pixie{
+ 	position:static;
+
+ }
+  #pixie * {
+  	font-family: 'pf_dintext_proregular', sans-serif !important;
+  }
