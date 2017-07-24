@@ -5,6 +5,20 @@
 	position: relative;
 }
 
+.first-screen-bg:after {
+	position: absolute;
+	content: "";
+	z-index: 100;
+	width: 1920px;
+	height: 20px;
+	left: 0;
+	right: 0;
+	bottom: -20px;
+	background: url("../img/bg-shadow.png") center no-repeat;
+	background-size: cover;
+	transform: rotateX(180deg)
+}
+
 .bg-animation {
 	background: url("../img/bg.jpg") center no-repeat;
 	background-size: cover;
@@ -131,7 +145,7 @@
 
 @media @mobil-widths {
 	.first-screen-bg {
-		height: 458px;
+		height: 412px;
 	}
 	.first-screen {
 		max-height: 458px;
@@ -141,7 +155,7 @@
 
 		&__title-bg {
 			width: 115vw;
-			
+			height: 400px;
 			padding-top: 0;
 			margin-left: -15vw;
 			margin-right: -15vw;
@@ -172,7 +186,7 @@
 			background-color: rgba(255, 255, 255, 0.5);
 			width: 115vw;
 			padding: 28px;
-			margin-top: 70px;
+			margin-top: 25px;
 		}
 	}
 

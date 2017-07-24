@@ -1,0 +1,148 @@
+.effect-logo {
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	margin: 0 20px;
+    padding: 18px 20px;
+
+    span {
+    	display: block;
+    	position: absolute;
+    	padding: 8px 0 0 0;
+    	left: 0;
+    	right: 0;
+    	bottom: -25px;
+		font-style: italic;
+    	z-index: 1;
+        color: rgba(0,0,0,0.4);  
+        opacity: 0;
+      
+        transition: transform 0.3s, opacity 0.3s;
+        transform: translateY(-100%);
+    }
+}
+
+.effect-logo::before,
+.effect-logo::after {
+    position: absolute;
+    top: 0;
+    left: 0;    
+    width: 100%;
+    height: 1px;
+    background: @color-bg-green;
+    content: '';
+    opacity: 0.2;   
+    transition: opacity 0.3s, height 0.3s;
+}
+
+.effect-logo::after {
+    top: 125%;
+    opacity: 0;    
+    transition: transform 0.3s, opacity 0.3s;    
+    transform: translateY(-10px);
+}
+
+.effect-logo:hover:before,
+.effect-logo:hover:after {
+	opacity: 1;   
+    transform: translateY(0px);
+}
+
+.effect-logo:hover:before {
+	height: 6px;
+}
+
+.effect-logo:hover span {
+	opacity: 1;   
+    transform: translateY(0%);
+}
+
+//**********************************
+//**********************************
+//**********************************
+
+.effect-logo-1 {
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	margin: 0 20px;
+    padding: 18px 20px;
+
+    span {
+    	position: relative;
+        display: inline-block;
+        width: 100%;
+    	height: 100%;
+        padding: 0 14px;
+        background-color: #ffffff;
+        font-style: italic;
+      
+        transition: transform 0.3s;
+       
+        transform-origin: 50% 0;
+      
+        transform-style: preserve-3d;
+    }
+}
+
+.effect-logo-1 span::before {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: @color-bg-light;
+    content: attr(data-hover);
+   	padding-top: 20px;
+    transition: background 0.3s;
+   
+    transform: rotateX(-90deg);
+   
+    transform-origin: 50% 0;
+}
+
+.effect-logo-1:hover span {
+	transform: rotateX(90deg) translateY(-22px);
+}
+
+
+
+//**********************************
+//**********************************
+//**********************************
+
+.effect-logo-2 {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	background-color: rgba(0, 0, 0, 0.6);
+	
+	/*box-shadow: inset 0 0 20px 8px rgba(255, 255, 255, 1);*/
+
+	transition: opacity ease-out 0.75s;
+	span {
+		display: block;
+		width: 100%;
+		padding: 0 20px;
+		font-size: 20px;
+		color: @color-bg-lightgreen;
+		text-transform: uppercase;
+		position: absolute;
+    	top: 50%;
+    	transform: translateY(-50%);
+
+	}
+}
+
+.main-logo__table table tr td:hover > .effect-logo-2 {
+	opacity: 1;
+	
+}
+
+
+
+	

@@ -481,23 +481,56 @@ a {
 .slider-controls li.active {
   background-color: #4a6d46;
 }
+.input {
+  position: relative;
+}
+.input i {
+  opacity: 0.6;
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  margin-top: -10px;
+  font-family: 'pf_dintext_prothin', sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+  color: #898989;
+  font-style: italic;
+  -webkit-transition: ease font-size 0.3s, ease top 0.3s, ease margin-top 0.3s, ease opacity 0.3s;
+  transition: ease font-size 0.3s, ease top 0.3s, ease margin-top 0.3s, ease opacity 0.3s;
+}
+.input--area i {
+  top: 25px;
+  opacity: 0.6;
+}
+input:focus ~ i,
+i.replay,
+textarea:focus ~ i {
+  opacity: 0.6;
+  font-size: 12px;
+  color: #5a5a5b;
+  margin-top: 0;
+  top: 0;
+}
 .user-input {
   display: inline-block;
+  width: 100%;
   vertical-align: middle;
   border: 1px solid #cdcdcd;
   -webkit-border-radius: 3px;
           border-radius: 3px;
-  color: #888888;
+  color: #898989;
   font-family: 'pf_dintext_prothin', sans-serif;
   font-size: 18px;
   font-style: italic;
-  line-height: 38px;
-  height: 38px;
+  line-height: 30px;
+  height: 50px;
   outline: none;
   padding: 0 20px;
+  padding-top: 18px;
   resize: none;
 }
 .user-input--main-form-kp {
+  display: inline-block;
   width: 290px;
   margin-right: 15px;
   margin-bottom: 10px;
@@ -521,7 +554,7 @@ a {
   display: block;
   width: 100%;
   line-height: 1.3;
-  padding-top: 10px;
+  padding-top: 15px;
   padding-bottom: 10px;
   margin-left: 0;
   height: auto;
@@ -580,6 +613,147 @@ a {
   color: #898989;
   text-decoration: none;
   cursor: default;
+}
+.effect-logo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin: 0 20px;
+  padding: 18px 20px;
+}
+.effect-logo span {
+  display: block;
+  position: absolute;
+  padding: 8px 0 0 0;
+  left: 0;
+  right: 0;
+  bottom: -25px;
+  font-style: italic;
+  z-index: 1;
+  color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+.effect-logo::before,
+.effect-logo::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #4d8045;
+  content: '';
+  opacity: 0.2;
+  -webkit-transition: opacity 0.3s, height 0.3s;
+  transition: opacity 0.3s, height 0.3s;
+}
+.effect-logo::after {
+  top: 125%;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+  -webkit-transform: translateY(-10px);
+      -ms-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+.effect-logo:hover:before,
+.effect-logo:hover:after {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+          transform: translateY(0px);
+}
+.effect-logo:hover:before {
+  height: 6px;
+}
+.effect-logo:hover span {
+  opacity: 1;
+  -webkit-transform: translateY(0%);
+      -ms-transform: translateY(0%);
+          transform: translateY(0%);
+}
+.effect-logo-1 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin: 0 20px;
+  padding: 18px 20px;
+}
+.effect-logo-1 span {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 0 14px;
+  background-color: #ffffff;
+  font-style: italic;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transform-origin: 50% 0;
+      -ms-transform-origin: 50% 0;
+          transform-origin: 50% 0;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+.effect-logo-1 span::before {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #e1e1e1;
+  content: attr(data-hover);
+  padding-top: 20px;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+  -webkit-transform-origin: 50% 0;
+      -ms-transform-origin: 50% 0;
+          transform-origin: 50% 0;
+}
+.effect-logo-1:hover span {
+  -webkit-transform: rotateX(90deg) translateY(-22px);
+          transform: rotateX(90deg) translateY(-22px);
+}
+.effect-logo-2 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  /*box-shadow: inset 0 0 20px 8px rgba(255, 255, 255, 1);*/
+  -webkit-transition: opacity ease-out 0.75s;
+  transition: opacity ease-out 0.75s;
+}
+.effect-logo-2 span {
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+  font-size: 20px;
+  color: #c2da76;
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.main-logo__table table tr td:hover > .effect-logo-2 {
+  opacity: 1;
 }
 .goup {
   display: none;
@@ -767,14 +941,16 @@ a {
   .page-header__center {
     width: 100%;
     text-align: center;
+    padding-top: 15px;
   }
   .page-header__right {
     width: 100%;
     text-align: center;
+    padding-top: 15px;
   }
   .page-header__right a.link {
-    margin-right: 0;
-    margin-left: auto;
+    margin: 10px auto 0;
+    text-align: center;
   }
 }
 .logo {
@@ -818,17 +994,18 @@ a {
   height: auto;
   padding-left: 50px;
   text-align: right;
-  font-family: 'pf_dintext_probold', sans-serif;
-  font-size: 36px;
-  color: #ffffff;
+  font-family: 'pf_dintext_probold', sans-serif !important;
+  font-size: 36px !important;
+  color: #ffffff !important;
   background: url("../img/ico-phone.png") no-repeat left center;
   background-size: auto;
   white-space: nowrap;
 }
-.phone span {
-  font-family: 'pf_dintext_proregular', sans-serif;
-  font-size: 36px;
-  color: #898989;
+.phone span,
+.phone a {
+  font-family: 'pf_dintext_proregular', sans-serif !important;
+  font-size: 36px !important;
+  color: #898989 !important;
 }
 @media (max-width: 780px) {
   .phone {
@@ -836,8 +1013,9 @@ a {
     text-align: left;
     font-size: 28px;
   }
-  .phone span {
-    font-size: 28px;
+  .phone span,
+  .phone a {
+    font-size: 28px !important;
   }
 }
 .page-footer-bg {
@@ -974,6 +1152,20 @@ a {
   height: 644px;
   position: relative;
 }
+.first-screen-bg:after {
+  position: absolute;
+  content: "";
+  z-index: 100;
+  width: 1920px;
+  height: 20px;
+  left: 0;
+  right: 0;
+  bottom: -20px;
+  background: url("../img/bg-shadow.png") center no-repeat;
+  background-size: cover;
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
 .bg-animation {
   background: url("../img/bg.jpg") center no-repeat;
   background-size: cover;
@@ -1102,7 +1294,7 @@ a {
 }
 @media (max-width: 780px) {
   .first-screen-bg {
-    height: 458px;
+    height: 412px;
   }
   .first-screen {
     max-height: 458px;
@@ -1112,6 +1304,7 @@ a {
   }
   .first-screen__title-bg {
     width: 115vw;
+    height: 400px;
     padding-top: 0;
     margin-left: -15vw;
     margin-right: -15vw;
@@ -1139,7 +1332,7 @@ a {
     background-color: rgba(255, 255, 255, 0.5);
     width: 115vw;
     padding: 28px;
-    margin-top: 70px;
+    margin-top: 25px;
   }
 }
 .mobil {
@@ -1282,7 +1475,7 @@ a {
 .main-nav-scroll {
   height: 55px;
   display: none;
-  background-color: transparent;
+  background-color: #417f46;
   /*box-shadow: 1px 0 20px 2px rgba(0, 0, 0, 0.2);   */
 }
 .main-nav-scroll .main-nav,
@@ -1737,6 +1930,7 @@ a {
 }
 .block-service__list li {
   display: inline-block;
+  vertical-align: top;
   max-width: 450px;
   color: #313131;
   padding-left: 45px;
@@ -1770,6 +1964,10 @@ a {
 }
 .block-service:last-child {
   width: 100%;
+}
+.block-service:last-child li {
+  width: 50%;
+  padding-right: 30px;
 }
 @media (max-width: 1024px) {
   .block-service {
@@ -2030,13 +2228,24 @@ a {
 }
 .main-logo__table table tr td {
   width: 33%;
+  height: 150px;
+  position: relative;
   vertical-align: middle;
   text-align: center;
-  padding: 20px 10px;
+  /*padding: 20px 20px;*/
+  cursor: pointer;
+  border-right: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
 }
 .main-logo__table table tr td img {
   max-width: 100%;
   max-height: 100%;
+}
+.main-logo__table table tr td:last-child {
+  border-right: none;
+}
+.main-logo__table table tr:last-child td {
+  border-bottom: none;
 }
 @media (max-width: 1024px) {
   .main-logo__title {
@@ -2130,6 +2339,12 @@ a {
   -webkit-border-radius: 4px;
           border-radius: 4px;
   background-color: #ffffff;
+  -webkit-box-shadow: 0 0 15px 1px transparent;
+          box-shadow: 0 0 15px 1px transparent;
+  -webkit-transition: -webkit-box-shadow ease 0.5s;
+  transition: -webkit-box-shadow ease 0.5s;
+  transition: box-shadow ease 0.5s;
+  transition: box-shadow ease 0.5s, -webkit-box-shadow ease 0.5s;
 }
 .block-article h5,
 .block-article h5.mobil {
@@ -2265,6 +2480,10 @@ a {
 .big .block-article__date,
 .big .block-article__time {
   display: inline-block;
+}
+.block-article:hover {
+  -webkit-box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.25);
 }
 @media (max-width: 780px) {
   .big .block-article,
@@ -2471,6 +2690,8 @@ a {
   padding: 5px;
 }
 .main-subs__user-input {
+  display: inline-block;
+  vertical-align: top;
   width: 305px;
   margin-bottom: 40px;
 }
@@ -2565,6 +2786,7 @@ a {
   width: 100%;
   text-align: center;
   padding-top: 20px;
+  min-height: 170px;
 }
 .steps-wr .step {
   position: relative;
@@ -2586,10 +2808,22 @@ a {
   background-repeat: no-repeat;
   background-color: transparent;
   background-size: 60%;
+  -webkit-transition: width linear 0.1s,
+						height linear 0.1s;
+  transition: width linear 0.1s,
+						height linear 0.1s;
+}
+.steps-wr .step__img:hover {
+  width: 65px;
+  height: 65px;
 }
 .steps-wr .step__text {
   display: block;
   margin: 0 auto;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  right: 0;
   color: #ffffff;
   font-family: 'pf_dintext_prothin', sans-serif;
   font-size: 16px;

@@ -1,19 +1,66 @@
+.input {
+	position: relative;
+
+	i {
+		opacity: 0.6;
+		position: absolute;
+		top: 50%;
+		left: 20px;
+		margin-top: -10px;
+
+		.text-thin(18px);
+		line-height: 20px;
+
+		color: @color-gray;
+		font-style: italic;
+
+		transition: ease font-size 0.3s,
+					ease top 0.3s,
+					ease margin-top 0.3s,
+					ease opacity 0.3s;
+	}
+}
+
+.input--area {
+	i {
+		top: 25px;
+		opacity: 0.6;
+	}
+}
+
+input:focus ~i,
+i.replay,
+textarea:focus ~i {
+	opacity: 0.6;
+	font-size: 12px;
+	color: @color-bg-lightgray;
+	margin-top: 0;
+	top: 0;
+}
+
+textarea:focus ~i {
+	
+}
+
 .user-input {
 	display: inline-block;
+	width: 100%;
 	vertical-align: middle;
 	border: 1px solid #cdcdcd;
 	border-radius: 3px;
-	color: #888888;
+	color: @color-gray;
 	.text-thin(18px);
 	font-style: italic;
-	line-height: 38px;
-	height: 38px;
+	line-height: 30px;
+	height: 50px;
 	outline: none;
-	padding: 0 20px;	
+	padding: 0 20px;
+	padding-top: 18px;	
 	resize: none;
 }
 
 .user-input--main-form-kp {
+	display: inline-block;
 	width: 290px;
 	margin-right: 15px;
 	margin-bottom: 10px;
@@ -44,12 +91,14 @@
 	display: block;
 	width: 100%;
 	line-height: 1.3;
-	padding-top: 10px;	
+	padding-top: 15px;	
 	padding-bottom: 10px;
 	margin-left: 0;
 	height: auto;
 	text-align: left;
 	margin-bottom: 20px;
+
+
 }
 
 
