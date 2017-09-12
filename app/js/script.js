@@ -1,5 +1,9 @@
 $(document).on('ready', function(){ 
-  
+  //Preloader
+  setTimeout(function(){
+    $('#preloader').fadeOut('slow',function(){$(this).remove();});
+  }, 1500);
+
 
 	function trimAll(s) {
 	// убирает все пробелы в строке s	

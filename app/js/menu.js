@@ -1,40 +1,69 @@
 $(document).on('ready', function(){
   var storage_clubCard = localStorage.getItem('clubCard');
-	var navMain = document.querySelectorAll('.main-nav-block');
-	var navToggle = document.querySelectorAll('.main-nav__toggle');
-	var start_pos = navMain[0].offsetTop + 100; 
+	var navMain = document.querySelector('.main-nav-block');
+	var navToggle = document.querySelector('.main-nav__toggle');
+	var start_pos = navMain.offsetTop + 100; 
   var FLAG_visible_scroll_menu = false;   
   //var filter = document.querySelector('#js-filter');
+
+  $('.open-nav').click(function(event){
+      event.preventDefault();
+      $('.page-works__nav ul li').css('display','block');
+      $(this).addClass('opened');
+  });
+
+   $('.page-works__nav ul li').click(function(event) {
+      event.preventDefault();
+      if ($('.open-nav').css('display') === 'none') {
+        var a_href =  $(this).find('a').attr('href');
+        window.location = a_href;
+        return;
+      }
+      if (!$('.open-nav').hasClass('opened')) {
+        $('.page-works__nav ul li').css('display','block');
+        $('.open-nav').addClass('opened');
+        return;
+      }
+      $('.open-nav').removeClass('opened');
+      $('.page-works__nav ul li').css('display','none');
+      $('.page-works__nav ul li').removeClass('active');
+      $(this).addClass('active');
+      $(this).css('display','block');
+      var a_href =  $(this).find('a').attr('href');
+      window.location = a_href;
+
+   });
 	
 
   $('.main-subs__check').click(function(event){
         event.preventDefault();
         $('#check').checked = true;
   });
+
+   function CloseTab() {
+      $('.main-nav-block').addClass('main-nav--closed');
+      $('.main-nav-block').removeClass('main-nav--opened');
+      
+   }
+
+   $('.js-body').click(function(event){
+      if ($('.main-nav-block').hasClass('main-nav--opened')) CloseTab()
+        else return;
+  });
    
 
-	navToggle[0].addEventListener('click', function() {
-		if (navMain[0].classList.contains('main-nav--closed')) {
-			navMain[0].classList.remove('main-nav--closed');	
-			navMain[0].classList.add('main-nav--opened');
+	navToggle.addEventListener('click', function() {
+		if (navMain.classList.contains('main-nav--closed')) {
+			navMain.classList.remove('main-nav--closed');	
+			navMain.classList.add('main-nav--opened');
 		} else {
-			navMain[0].classList.add('main-nav--closed');	
-			navMain[0].classList.remove('main-nav--opened');	
+			navMain.classList.add('main-nav--closed');	
+			navMain.classList.remove('main-nav--opened');	
 		}
 	});
-
-
   
 
- navToggle[1].addEventListener('click', function() {
-    if (navMain[1].classList.contains('main-nav--closed')) {
-      navMain[1].classList.remove('main-nav--closed');  
-      navMain[1].classList.add('main-nav--opened');
-    } else {
-      navMain[1].classList.add('main-nav--closed'); 
-      navMain[1].classList.remove('main-nav--opened');  
-    }
-  });
+
 
 	$(window).scroll(function(){
 
@@ -43,34 +72,12 @@ $(document).on('ready', function(){
             } else {
                   $('.goup').fadeOut();
              };
-
-    if ($(window).scrollTop() > start_pos && !FLAG_visible_scroll_menu) {
-          if ($('.main-nav-scroll').hasClass('to_top')==false) {                        
-                $('.main-nav-scroll').addClass('to_top');
-                $('.main-nav-scroll').slideDown(600);/*600 */
-                FLAG_visible_scroll_menu = true;
-                setTimeout(function(){
-                  $('.main-nav-scroll').css("box-shadow", "1px 0 20px 2px rgba(0, 0, 0, 0.3)");
-                }, 7000);
-          } 
-    } 
-
-    if ($(window).scrollTop() < start_pos && FLAG_visible_scroll_menu) {
-                 $('.main-nav-scroll').slideUp(100, function() { /*100 */
-                    $('.main-nav-scroll').removeClass('to_top');               
-                    FLAG_visible_scroll_menu = false;                   
-                 });         
-             
-          };
-
-  });  
-
+  });
+    
    $('.goup').click(function(){
             $("html, body").animate({ scrollTop: 0 }, 600);
             return false;
       });      
-
-      
-
+   
 
 });

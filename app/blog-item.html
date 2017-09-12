@@ -20,7 +20,12 @@
 	<!-- jQuery -->
 	<script src="js/venders/jquery-1.12.4.js"></script>
 	<script src="js/venders/jquery.maskedinput.js"></script>
-	
+	<script src="js/venders/jquery.sticky.js"></script>
+	 <script> 
+    $(window).load(function(){ 
+    	$("#header-sticky-wrapper").sticky({ topSpacing: 0 }); 
+    	}); 
+    </script>
 
 	
 	<link rel="stylesheet" href="css/venders/jquery.arcticmodal-0.3.css">	
@@ -33,6 +38,11 @@
 	 <![endif]-->
 </head> 
 <body>
+<!-- Preloader -->
+    <div id="preloader">
+      <div class="cssload-whirlpool"></div>
+    </div>
+
 
 
 <div class="wrapper-x">
@@ -59,17 +69,19 @@
 		</div>
 
 	<!-- *************************** БЛОК МЕНЮ ***************************************- -->
+		<div id="header-sticky-wrapper" class="sticky-wrapper">
 		<div class="main-nav-block main-nav--closed">
 			<button class="main-nav__toggle" type="button">Открыть меню</button>
 			<div class="main-nav__logo-mobile"></div>	
 			<nav class="main-nav">			
 				<div class="main-nav__wrapper">
+					<a href="index.html" class="main-nav__logo-scroll"></a>
 					<ul>
 						<li><a href="index.html">Главная</a></li>
 						<li><a href="about.html">Услуги</a></li>
 						<li><a href="schedule.html">Выполненные работы</a></li>
 						<li><a href="smi-publications.html">Отзывы</a></li>
-						<li  class="active"><a href="gallery.html">Блог</a></li>
+						<li  class="active"><a href="blog-list.html">Блог</a></li>
 						<li><a href="lease.html">Обучение</a></li>					
 						<li><a href="contacts.html">Контакты</a></li>
 					</ul>
@@ -82,6 +94,9 @@
 				</div>
 			</nav>
 		</div>
+		</div>
+
+		<div class="js-body">
 
 	<!-- *************************** BreadCrumbs ***************************************- -->
 		<div class="page-block">
@@ -112,6 +127,22 @@
 				</div>
 
 			</div>
+
+			<div id="hypercomments_widget"></div>
+			<script type="text/javascript">
+			_hcwp = window._hcwp || [];
+			_hcwp.push({widget:"Stream", widget_id: 93670});
+			(function() {
+			if("HC_LOAD_INIT" in window)return;
+			HC_LOAD_INIT = true;
+			var lang = (navigator.language || navigator.systemLanguage || navigator.userLanguage || "en").substr(0, 2).toLowerCase();
+			var hcc = document.createElement("script"); hcc.type = "text/javascript"; hcc.async = true;
+			hcc.src = ("https:" == document.location.protocol ? "https" : "http")+"://w.hypercomments.com/widget/hc/93670/"+lang+"/widget.js";
+			var s = document.getElementsByTagName("script")[0];
+			s.parentNode.insertBefore(hcc, s.nextSibling);
+			})();
+			</script>
+			<a href="http://hypercomments.com" rel = "nofollow" class="hc-link" title="comments widget">comments powered by HyperComments</a>
 		
 
 			<div class="turn-pages-wrapper">
@@ -222,11 +253,18 @@
 			<div class="main-subs">
 				<h2 class="white">Полезное чтение на <span>выходных</span>
 				<p class="main-subs__subtitle">Выбираю самые интересные статьи и присылаю 1 раз в неделю</p></h2>
-				<form method="post" class="main-subs__form">    
-				  	<input type="text" class="user-input main-subs__user-input required" id="user_name_main_subs" name="user-name" placeholder="Имя" >				   	
-				    <input type="email" class="user-input main-subs__user-input required" id="user_mail_main_subs" name="user-mail" placeholder="E-mail">
+				<form method="post" class="main-subs__form">
+					<div class="input main-subs__user-input">
+						<input type="text" class="user-input required" id="user_name_main_subs" name="user-name">
+						<i>Имя</i>
+					</div> 
+					<div class="input main-subs__user-input">
+						<input type="email" class="user-input required" id="user_mail_main_subs" name="user-mail">
+						<i>E-mail</i>
+					</div>   	
+				   
 				    <div class="ch_wrapper main-subs__check">
-				    	<input id="check" type="checkbox" name="check[]" value="2">
+				    	<input id="check" type="checkbox" name="check[]" checked>
 				    	<label for="check">Без спама и только по делу</label>
 				    </div> 				    
 					<button class="btn main-subs__btn" type="submit" id="btn_main-subs">Подписаться</button> 
@@ -239,12 +277,11 @@
 
 
 
-		
-
+	</div>
 	<!-- *************************** БЛОК ПОДВАЛ***************************************- -->	
 	</div> <!-- end wrapper-y -->	
-
-	<footer class="page-footer-bg">
+	
+	<footer class="page-footer-bg js-body">
 		<div class="page-footer">
 			<div class="page-footer__left">
 				<a href="index.html" class="logo">STARK</a>
@@ -263,27 +300,7 @@
 	</footer>
 
 	<!-- ************** БЛОК ПРИЛИПАЮЩАЯ НАВИГАЦИЯ ПРИ СКРОЛЛЕ ******************- -->
-	<div class="main-nav-scroll">
-		<div class="main-nav-block main-nav--closed">
-			<button class="main-nav__toggle" type="button">Открыть меню</button>
-			<div class="main-nav__logo-mobile"></div>
-			<nav class="main-nav">			
-				<div class="main-nav__wrapper">
-					<div class="block-logo-scroll"></div>
-					<ul>
-						<li><a href="">Главная</a></li>
-						<li><a href="about.html">Услуги</a></li>
-						<li><a href="schedule.html">Выполненные работы</a></li>
-						<li><a href="smi-publications.html">Отзывы</a></li>
-						<li class="active"><a href="gallery.html">Блог</a></li>
-						<li><a href="lease.html">Обучение</a></li>					
-						<li><a href="contacts.html">Контакты</a></li>
-					</ul>
-				</div>
-			</nav>
-		</div>
-	</div>
-
+	
 <!-- ************** БЛОК МОДАЛЬНЫЕ ОКНА ******************- -->
 
 
