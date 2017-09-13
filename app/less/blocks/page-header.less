@@ -69,13 +69,15 @@
 		&__center {
 			width: 100%;
 			text-align: center;
+			padding-top: 15px;
 		}
 		&__right {
 			width: 100%;
 			text-align: center;
+			padding-top: 15px;
 			a.link {
-				margin-right: 0;
-				margin-left: auto;
+				margin: 10px auto 0;
+				text-align: center;
 			}
 		}
 	}
@@ -86,7 +88,7 @@
 	width: 192px;
 	height: 78px;
 	font-size: 0;
-	background: url("../img/logo.png") no-repeat center;
+	background: url("../img/logo.svg") no-repeat center;
 	background-size: contain;
 }
 
@@ -110,6 +112,7 @@
 	@media @mobil-widths {
 		width: 300px;
 		font-size: 17px;
+		padding-left: 35px;
 		span { font-size: 14px;}
 	}
 }
@@ -120,21 +123,22 @@
 	height: auto;
 	padding-left: 50px;
 	text-align: right;
-	.text-bold(36px);
-	color: @color-white;
+	.text-bold(36px) !important;
+	color: @color-white !important;
 	background: url("../img/ico-phone.png") no-repeat left center;
 	background-size: auto;
 	white-space: nowrap;
+	padding-left: 35px;
 
-	span {		
-		.text-regular(36px);
-		color: @color-gray;
+	span, a {		
+		.text-regular(36px)  !important;
+		color: @color-gray  !important;
 	}
 
 	@media @mobil-widths {
 		width: 300px;
 		text-align: left;
 		font-size: 28px;
-		span { font-size: 28px;}
+		span, a { font-size: 28px !important;}
 	}
 }

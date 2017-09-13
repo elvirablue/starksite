@@ -1,0 +1,58 @@
+
+#preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10000;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  background: url("../img/favicon.png") no-repeat center #e8e8e8;
+  
+}
+  #preloader .cssload-whirlpool {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px solid #fff;   
+    border-radius: 974px; 
+      
+
+}
+#preloader .cssload-whirlpool::before, #preloader .cssload-whirlpool::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border: 1px solid #fff;
+      border-left-color: #417f46;
+      border-radius: 974px;
+      margin: -75px 0 0 -75px;
+      height: 150px;
+      width: 150px;
+      animation: cssload-rotate 1150ms linear infinite; 
+}
+    #preloader .cssload-whirlpool::before {
+      content: "";
+      margin: -65px 0 0 -65px;
+      height: 130px;
+      width: 130px;
+      animation: cssload-rotate 1150ms linear infinite; 
+    }
+
+    #preloader .cssload-whirlpool::after {
+      content: "";
+      margin: -80px 0 0 -80px;
+      height: 160px;
+      width: 160px;
+      animation: cssload-rotate 2300ms linear infinite; 
+    }
+
+    @-webkit-keyframes cssload-rotate {
+      100% {
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg); } }
+
+    @keyframes cssload-rotate {
+      100% {
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg); } }

@@ -10,7 +10,7 @@
 	.block-logo-scroll {
 		display: inline-block;
 		float: left;
-		background: url("../img/logo.png") no-repeat center left;
+		background: url("../img/logo.svg") no-repeat center left;
 		background-size: contain;
 		width: 100px;
 		margin-right: 50px;
@@ -69,6 +69,7 @@
 .main-nav {
 	background-color: @color-bg-nav-green;	
 	min-height: @nav-min-height;
+	position: relative;
 
 	&__social {
 		float: right; 
@@ -99,7 +100,6 @@
 					text-decoration: none;	
 					transition: color ease 0.3s;
 					white-space: nowrap;				
-					
 				}
 			}
 
@@ -125,9 +125,10 @@
 
 .main-nav-scroll {
 	height: @nav-min-height-scroll;
-  	display: none;
-  	background-color: transparent;
-  	/*box-shadow: 1px 0 20px 2px rgba(0, 0, 0, 0.2);   */
+  	display: block;
+
+  	
+  	box-shadow: 1px 0 20px 2px rgba(0, 0, 0, 0.2);   
 	.main-nav,	
   	.main-nav__wrapper,
    	.main-nav__wrapper ul,
@@ -145,11 +146,23 @@
 		float: right;
   }
 
+  .main-nav__social {
+		display: none;
+	}
+
+	.main-nav__logo-scroll {
+		display: inline-block;
+		width: 120px;
+		height: 45px;
+		margin-top: 5px;
+		
+		background: url("../img/logo.svg") no-repeat center;
+		background-size: contain;
+	}
 
 }
 
-.main-nav__logo-mobile {
-	display: block;
+.main-nav__logo-mobile {	
 	display: none;
 	position: absolute;
 	z-index: 5002;
@@ -157,8 +170,8 @@
 	left: 40px;
 	width: 161px;
 	height: 65px;
-	background: url("../img/logo-w.png") no-repeat center;
-	background-size: cover;
+	background: url("../img/logo.svg") no-repeat center;
+	background-size: contain;
 }
 
 
@@ -166,12 +179,24 @@
 @media @tablet-widths {	
 	.main-nav-scroll {
   		background-color: transparent;
-  		box-shadow: none;  		
+  		box-shadow: none;  
+
+  		.main-nav .main-nav__wrapper ul li a {
+  			height: auto;
+  			line-height: auto;
+  			text-align: left;
+  		}	
+
+  		.main-nav__logo-scroll {
+  			display: none;
+  		}	
   	}
 
   	.main-nav .block-logo-scroll {
   		display: none;
   	}
+
+
 
   	.main-nav__logo-mobile {
   		display: block;
@@ -188,7 +213,8 @@
 			
 	}
 
-	.main-nav .main-nav__wrapper {
+	.main-nav .main-nav__wrapper,
+	.main-nav-scroll .main-nav .main-nav__wrapper {
 		
 		background-color: @color-logo-green-hover;
 		box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.3);
@@ -346,8 +372,13 @@
 		right: 15px;
 	}
 
-	.main-nav .main-nav__wrapper ul {
+	.main-nav .main-nav__wrapper ul,
+	.main-nav-scroll .main-nav .main-nav__wrapper ul {
 		width: 100%;
+		li a {
+			text-align: center;
+			padding: 7px 30px;
+		}
 	}
 
 	.main-nav--opened .main-nav {

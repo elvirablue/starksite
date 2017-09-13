@@ -20,6 +20,7 @@
 	width: 100%;
 	text-align: center;
 	padding-top: 20px;
+	min-height: 170px;
 
 	.step {
 		position: relative;
@@ -41,11 +42,25 @@
 			background-repeat: no-repeat;
 			background-color: transparent;
 			background-size: 60%;
+
+			transition: width linear 0.1s,
+						height linear 0.1s;
+		}
+
+		&__img:hover {
+			
+			width: 65px;
+			height: 65px;
+
 		}
 
 		&__text {
 			display: block;
 			margin: 0 auto;
+			position: absolute;
+			top: 100px;
+			left: 0;
+			right: 0;
 			
 			color: @color-white;
 			.text-thin(16px);
@@ -96,6 +111,12 @@
 		.step:before {
 			right: -20px;
 		}
+		&__img:hover {
+			
+			width: 55px;
+			height: 55px;
+
+		}
 	}	
 }
 
@@ -106,17 +127,28 @@
 			display: block;
 			width: 100%;
 			max-width: 280px;
-			margin: 0 auto 50px;
+			margin: 0 auto 30px;
 
 			&__img {
+				display: inline-block;
+				vertical-align: middle;
 				width: 80px;
 				height: 80px;
 				margin-bottom: 5px;
 			}
+
+			&__text {
+				display: inline-block;
+				vertical-align: middle;
+				position: static;
+				width: 160px;
+				text-align: left;
+				margin-left: 20px;
+			}
 		}
 
 		.step:before {
-			right: 50%;
+			left: 30px;
 			margin-right: -17px;
 			top: auto;
 			bottom: -28px;
@@ -125,7 +157,7 @@
 	
 		.step:first-child,
 		.step:last-child {
-			margin: 0 auto 50px;
+			margin: 0 auto 30px;
 		}
 	}
 }

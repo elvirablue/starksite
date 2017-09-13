@@ -1,0 +1,28 @@
+.block-contacts {
+	display: block;
+	width: 100%;
+	padding: 20px;
+	padding-right: 0;
+
+	.contact {
+		text-align: left;
+		padding: 10px;
+		padding-left: 40px;
+		background-image: url("../img/sprite-contacts.png");
+		background-repeat: no-repeat;
+		background-size: auto;
+
+		&--address {background-position: 0 10px;}
+		&--phone {background-position: 0 -91px;}
+		&--mail {background-position: 0 -149px;}
+		&--time {background-position: 0 -210px;}
+	}
+
+	@media @mobil-widths {
+		padding: 20px 0;
+
+
+	}
+
+	
+}

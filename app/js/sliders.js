@@ -1,4 +1,36 @@
 document.addEventListener('DOMContentLoaded', function () {
+
+        var owl = $('#owl-slider1');
+
+       owl.owlCarousel({
+         loop:true,//Зацикливаем слайдер
+         margin:0,
+         dots: true,
+         navigation : true, // показывать кнопки next и prev 
+         autoplayHoverPause: true, //Останавливает автопроигрывание если навести мышкой (hover) на элемент
+         autoplay:false, //Автозапуск слайдера
+         smartSpeed:2500, //Время движения слайда
+         autoplayTimeout:40, //Время смены слайда
+         responsiveClass:true,        
+         responsive:{
+             0:{
+                 items:1,
+                 nav:true
+             },
+             600:{
+                 items:1,
+                 nav:true
+             },
+             1000:{
+                 items:1,
+                 nav:true
+             }
+           }
+       });
+
+
+
+
         var simple_dots       = document.querySelector('.js_simple_dots');
         var dot_count         = simple_dots.querySelectorAll('.js_slide').length;
         var dot_container     = document.querySelector('.js_dots');
