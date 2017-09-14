@@ -321,6 +321,8 @@ a {
   min-width: 280px;
   height: 40px;
   line-height: 40px;
+  padding: 0;
+  color: #313131;
   cursor: pointer;
   font-family: 'pf_dintext_proregular', sans-serif;
   font-size: 16px;
@@ -2611,9 +2613,8 @@ textarea:focus ~ i {
   content: "";
   display: block;
   position: absolute;
-  top: 50%;
+  top: 10px;
   left: 0;
-  margin-top: -2px;
   width: 25px;
   height: 4px;
   background-color: #4d8045;
@@ -2815,6 +2816,7 @@ textarea:focus ~ i {
   display: block;
   margin: 5px auto;
   width: 80%;
+  white-space: normal;
 }
 @media (max-width: 1024px) {
   .main-form-kp__img-mac {
@@ -3150,7 +3152,7 @@ textarea:focus ~ i {
   color: #417f46;
   text-shadow: 1px 2px 1.5px rgba(0, 0, 0, 0.3);
   padding: 0;
-  padding-top: 380px;
+  padding-top: 380px !important;
 }
 .page-block__work-title {
   font-family: 'pf_dintext_probold', sans-serif !important;
